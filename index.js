@@ -1,17 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array.length; j++){
+      if(i != j){
+        if(array[i] + array[j] == target){
+          return true;
+        }
+      }
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  I think this is O(n^2) since it loops through the entire array 
+  once for every single element
 */
 
 /* 
   Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
+  loop through the array
+  create inner loop so we can add the outerloop's element to 
+  every other element in the array and check if the sum
+  is equal to the target value
 */
 
 // You can run `node index.js` to view these console logs
